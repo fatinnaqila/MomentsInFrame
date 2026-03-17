@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moments in Frame</title>
+    <link rel="stylesheet" href="frontPage_style.css">
+</head>
+<script src="script.js"></script>
+<script src="bookingScript.js"></script>
+<body>
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li class="highlight">MOMENTS IN FRAME</li> a
+                <li><a href="#package">Package</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li>
+                    <!-- Cart icon -->
+                    <button onclick="openCart()" class="cart-icon">
+                        <img src="AddToCart.jpeg" alt="Cart" width="30">
+                        <span id="cart-count">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- Your main content goes here -->
+        <h1 style="text-align: center; color: white">Welcome to Moments in Frame -- Where Memories Come to Life</h1>
+        <h3 style="text-align: center; color: white;">At Moments in Frame, we believe every moment deserves to be remembered. Whether it's your pre-convocation 
+            celebration, a joyful birthday party, or a personal photo session, our team of passionate photographers 
+            is here to capture the essence of your day. With creativity, professionalism, and a touch of personal care, 
+            we ensure every shot tells your unique story.</h3>
+        
+            <section id="about">
+                <h1>About Us</h1>
+                <h2>Meet Your Storytellers</h2>
+                <div class="team-container">
+                    <div class="team-member" onclick="toggleBio('bio1')">
+                        <img src="AboutUs_Picture/MARSYA_aboutus.jpg" alt="Marsya" width="300" height="400">
+                        <h3>LEITEY MARSYA</h3>
+                        <p class="bio" id="bio1">"Your story is unique, and we’re here to help you tell it through the lens."</p>
+                    </div>
+                    <div class="team-member" onclick="toggleBio('bio2')">
+                        <img src="AboutUs_Picture/FATIN2_aboutus.jpg" alt="Fatin" width="300" height="400">
+                        <h3>FATIN</h3>
+                        <p class="bio" id="bio2">"Special moments don’t last forever, but with us, the memories will."</p>
+                    </div>
+                    <div class="team-member" onclick="toggleBio('bio3')">
+                        <img src="AboutUs_Picture/AISYAH_aboutus.jpg" alt="Aisyah" width="300" height="400">
+                        <h3>AISYAH</h3>
+                        <p class="bio" id="bio3">"The best moments in life deserve to be framed with care."</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Graduation Gallery Section -->
+    <section id="gallery">
+        <section class="category">
+            <h1 onclick="toggleGallery('graduationGallery')">GRADUATION SAMPLE</h1>
+            <div id="graduationGallery" class="gallery hidden">
+                <div class="gallery-item"><img src="Garudation/Graduation1.jpg" alt="Graduation1"></div>
+                <div class="gallery-item"><img src="Garudation/graduation3.jpg" alt="Graduation3"></div>
+                <div class="gallery-item"><img src="Garudation/graduation6.jpg" alt="Graduation6"></div>
+                <div class="gallery-item"><img src="Garudation/graduation7.jpg" alt="Graduation7"></div>
+                <div class="gallery-item"><img src="Garudation/graduation8.jpg" alt="Graduation8"></div>
+                <div class="gallery-item"><img src="Garudation/graduation9.jpg" alt="Graduation9"></div>
+                <div class="gallery-item"><img src="Garudation/graduation10.jpg" alt="Graduation10"></div>
+                <div class="gallery-item"><img src="Garudation/graduation11.jpg" alt="Graduation11"></div>
+                <div class="gallery-item"><img src="Garudation/graduation5.jpg" alt="Graduation5"></div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h1 onclick="toggleGallery('birthdayGallery')">BIRTHDAY PARTY SAMPLE</h1>
+            <div id="birthdayGallery" class="gallery hidden">
+                <div class="gallery-item"><img src="Birthday/birthday1.jpg" alt="Birthday1"></div>
+                <div class="gallery-item"><img src="Birthday/birthday3.jpg" alt="Birthday3"></div>
+                <div class="gallery-item"><img src="Birthday/birthday4.jpg" alt="Birthday4"></div>
+                <div class="gallery-item"><img src="Birthday/birthday5.jpg" alt="Birthday5"></div>
+                <div class="gallery-item"><img src="Birthday/birthday6.jpg" alt="Birthday6"></div>
+                <div class="gallery-item"><img src="Birthday/birthday7.jpg" alt="Birthday7"></div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h1 onclick="toggleGallery('groupGallery')">GROUP PHOTOGRAPHY SAMPLE</h1>
+            <div id="groupGallery" class="gallery hidden">
+                <div class="gallery-item"><img src="GroupPhotography/group.jpg" alt="Group1"></div>
+                <div class="gallery-item"><img src="GroupPhotography/group2.jpg" alt="Group3"></div>
+                <div class="gallery-item"><img src="GroupPhotography/group4.jpg" alt="Group5"></div>
+                <div class="gallery-item"><img src="GroupPhotography/group7.jpg" alt="Group8"></div>
+                <div class="gallery-item"><img src="GroupPhotography/group8.jpg" alt="Group9"></div>
+                <div class="gallery-item"><img src="GroupPhotography/group9.jpg" alt="Group10"></div>
+                <div class="gallery-item"><img src="GroupPhotography/group1.JPG" alt="Group2"></div>
+                <div class="gallery-item"><img src="GroupPhotography/group3.jpg" alt="Group4"></div>
+                <div class="gallery-item"><img src="GroupPhotography/group5.JPG" alt="Group6"></div>
+                <div class="gallery-item"><img src="GroupPhotography/group6.jpg" alt="Group7"></div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h1 onclick="toggleGallery('personalGallery')">PERSONAL PHOTOGRAPHY</h1>
+            <div id="personalGallery" class="gallery hidden">
+                <div class="gallery-item"><img src="PersonalPhotography/Personal1.JPG" alt="Personal1"></div>
+                <div class="gallery-item"><img src="PersonalPhotography/personal2.jpg" alt="Personal2"></div>
+                <div class="gallery-item"><img src="PersonalPhotography/personal3.jpg" alt="Personal3"></div>
+                <div class="gallery-item"><img src="PersonalPhotography/personal4.jpg" alt="Personal4"></div>
+                <div class="gallery-item"><img src="PersonalPhotography/personal5.jpg" alt="Personal5"></div>
+                <div class="gallery-item"><img src="PersonalPhotography/personal6.jpg" alt="Personal6"></div>
+                <div class="gallery-item"><img src="PersonalPhotography/personal7.jpg" alt="Personal7"></div>
+                <div class="gallery-item"><img src="PersonalPhotography/personal8.jpg" alt="Personal8"></div>
+            </div>
+        </section>
+
+        <!-- Modal for image enlargement -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+    </section>
+
+    <!-- Modal for image enlargement -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+
+            <section id="package"> 
+                <h1>Photography Tailored for Every Occasion</h1>
+                <h3>No event is too big or too small. From the exciting journey of pre-convocation to intimate birthday 
+                celebrations, from solo portraits to fun group photos – we’ve got you covered!</h3>
+            
+                <!-- Pre-Convocation Package -->
+                <div class="package-card">
+                    <h4>Pre-Convocation Photography</h4>
+                    <ul>
+                        <li><b>Package A</b></li>
+                        <li>Total Pictures: 20 edited photos</li>
+                        <li>Price: <span class="price">RM100</span></li>
+                        <li>Video: No</li>
+                        <li>A simple photo session capturing the essential moments. Ideal for quick, focused shoots.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Pre-Convocation', 'A', 100)" class="cta-button">Book Now</button>
+
+                    <ul>
+                        <li><b>Package B</b></li>
+                        <li>Total Pictures: 40 edited photos</li>
+                        <li>Price: <span class="price">RM200</span></li>
+                        <li>Video:1-minute highlight video</li>
+                        <li>A comprehensive package with more photo coverage and a short video that captures the event’s highlights.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Pre-Convocation', 'B', 200)" class="cta-button">Book Now</button>
+
+                    <ul>
+                        <li><b>Package c</b></li>
+                        <li>Total Pictures: 60 edited photos + all raw photos (optional)</li>
+                        <li>Price: <span class="price">RM350</span></li>
+                        <li>Video:3-5 minute video including personalized interviews or messages</li>
+                        <li>This premium package includes more photos, extended video coverage, and more personal touches.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Pre-Convocation', 'C', 350)" class="cta-button">Book Now</button>
+
+                </div>
+
+                <!-- Birthday Photography Package -->
+                <div class="package-card">
+                    <h4>Birthday Party Photography</h4>
+                    <ul>
+                        <li><b>Package A</b></li>
+                        <li>Total Pictures: 30 edited photos</li>
+                        <li>Price: <span class="price">RM150</span></li>
+                        <li>Video: No</li>
+                        <li>A fun and simple photo package covering key moments of the party.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Birthday', 'A', 150)" class="cta-button">Book Now</button>
+
+                    <ul>
+                        <li><b>Package B</b></li>
+                        <li>Total Pictures: 60 edited photos</li>
+                        <li>Price: <span class="price">RM250</span></li>
+                        <li>Video: 2-minute highlight video</li>
+                        <li>Includes extended coverage with both photos and a highlight video to preserve the joyful moments.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Birthday', 'B', 250)" class="cta-button">Book Now</button>
+
+                    <ul>
+                        <li><b>Package C</b></li>
+                        <li>Total Pictures: 100 edited photos + all raw photos (optional)</li>
+                        <li>Price: <span class="price">RM400</span></li>
+                        <li>Video: 5-minute video with birthday messages or interviews</li>
+                        <li>Full photo and video coverage, capturing every detail and memory with personalized video 
+                            messages.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Birthday', 'C', 400)" class="cta-button">Book Now</button>
+                </div>
+            
+                <!-- Group Photography Package -->
+                <div class="package-card">
+                    <h4>Group Photography</h4>
+                    <ul>
+                        <li><b>Package A</b></li>
+                        <li>Total Pictures: 20 edited group photos</li>
+                        <li>Price: <span class="price">RM120</span></li>
+                        <li>Video: No</li>
+                        <li>Simple and essential, perfect for small group gatherings.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Group', 'A', 120)" class="cta-button">Book Now</button>
+
+                    <ul>
+                        <li><b>Package B</b></li>
+                        <li>Total Pictures: 40 edited group photos</li>
+                        <li>Price: <span class="price">RM220</span></li>
+                        <li>Video:  2-minute group video montage</li>
+                        <li>Extended photo coverage with a short video montage of group interactions and highlights.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Group', 'B', 220)" class="cta-button">Book Now</button>
+
+                    <ul>
+                        <li><b>Package C</b></li>
+                        <li>Total Pictures:  70 edited group photos + all raw photos (optional)</li>
+                        <li>Price: <span class="price">RM350</span></li>
+                        <li>Video:  5-minute group video with interviews/messages</li>
+                        <li>Full coverage with more images, a longer video, and personalized touches like group messages or 
+                            interviews.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Group', 'B', 220)" class="cta-button">Book Now</button>
+
+                </div>
+
+                <!-- Personal Portraits Package -->
+                <div class="package-card">
+                    <h4>Personal Portraits</h4>
+                    <ul>
+                        <li><b>Package A</b></li>
+                        <li>Total Pictures: 10 edited photos</li>
+                        <li>Price: <span class="price">RM75</span></li>
+                        <li>Video: No</li>
+                        <li>A quick and focused session for a few stunning portraits.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Personal Portraits', 'A', 75)" class="cta-button">Book Now</button>
+
+                    <ul>
+                        <li><b>Package B</b></li>
+                        <li>Total Pictures: 20 edited photos</li>
+                        <li>Price: <span class="price">RM150</span></li>
+                        <li>Video: No</li>
+                        <li>A more comprehensive portrait session with a variety of shots.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Personal Portraits', 'B', 150)" class="cta-button">Book Now</button>
+
+                    <ul>
+                        <li><b>Package C</b></li>
+                        <li>Total Pictures:  35 edited photos + all raw photos (optional)</li>
+                        <li>Price: <span class="price">RM250</span></li>
+                        <li>Video: behind-the-scenes 1-minute video</li>
+                        <li>Full package with extra images and a behind-the-scenes video to showcase the process and 
+                            personality.</li>
+                    </ul>
+                    <button onclick="redirectToBooking('Personal Portraits', 'C', 250)" class="cta-button">Book Now</button>
+                </div>
+            
+                <!-- Accordion example for expanding package details -->
+                <button class="accordion">Package A: Basic Package</button>
+                <div class="panel">
+                    <p>Total Pictures: 30 edited photos, Price: RM150, Video: No, Description: A fun and simple photo 
+                        package covering key moments of the party.</p>
+                </div>
+            
+                <button class="accordion">Package B: Standard Package</button>
+                <div class="panel">
+                    <p>Total Pictures: 60 edited photos, Price: RM250, Video: Yes, 2-minute highlight video, Description:
+                         Includes extended coverage with both photos and a highlight video to preserve the joyful moments.
+                    </p>
+                </div>
+            
+                <button class="accordion">Package C: Premium Package</button>
+                <div class="panel">
+                    <p>Total Pictures: 100 edited photos + all raw photos (optional), Price: RM400, Video: 
+                        Yes, 5-minute video with birthday messages or interviews, Description: Full photo and 
+                        video coverage, capturing every detail and memory with personalized video messages.</p>
+                </div>
+            </section>
+
+
+            <section id="contact">
+                <div class="background-blur"></div> <!-- Background wrapper for blur effect -->
+                <div class="contact-content">
+                    <h2>LET'S TALK!</h2>
+                    <p class="booking"><strong>NOW BOOKING 2024 + 2025!</strong></p>
+                    <p class="contact-text">
+                        Instead of asking you to fill out an impersonal form, we’d love to talk and get to know you. 
+                        Reach out and tell us about your cats, your favorite spot for coffee or tea, or the coolest 
+                        place you've ever traveled. Then we'll jump on a quick call to talk more about your photography 
+                        session and see if we're a good fit. But don't wait; we only do 30 photography sessions per year. 
+                        Can't wait to hear from you!
+                    </p>
+                    <p class="names">Marsya, Fatin & Aisyah</p>
+                    <p class="contact-info">+05-334 6150<br>
+                        <a href="mailto:loversdrama307@gmail.com">loversdrama307@gmail.com</a>
+                    </p>
+                </div>
+            </section>
+
+            <div id="cartModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeCart()">&times;</span>
+                    <h2>Your Cart</h2>
+                    <div id="cart-items"></div>
+                    <button onclick="checkout()">Checkout</button>
+                </div>
+            
+    </div>
+</body>
+</html>

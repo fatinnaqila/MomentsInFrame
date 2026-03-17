@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="bookingStyles.css">
+</head>
+<body>
+    <section id="booking">
+        <h2 style=" color: aliceblue;">Booking Information</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required pattern="[0-9]{10,11}">
+
+            <label for="package">Package Selection:</label>
+            <select id="package" required>
+                <option value="">--Select a Package--</option>
+                <option value="Pre-Convocation A">Graduation: Package A</option>
+                <option value="Pre-Convocation B">Graduation: Package B</option>
+                <option value="Pre-Convocation C">Graduation: Package C</option>
+                <option value="Birthday A">Birthday: Package A</option>
+                <option value="Birthday B">Birthday: Package B</option>
+                <option value="Birthday C">Birthday: Package C</option>
+                <option value="Group A">Group: Package A</option>
+                <option value="Group B">Group: Package B</option>
+                <option value="Group C">Group: Package C</option>
+                <option value="Personal Portraits A">Personal: Package A</option>
+                <option value="Personal Portraits B">Personal: Package B</option>
+                <option value="Personal Portraits C">Personal: Package C</option>
+
+                
+            </select>
+
+            <label for="date">Booking Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="address">Shoot Place Address:</label>
+            <input type="text" id="address" required>
+
+            <label for="totalPrice">Total Price: RM</label>
+            <span id="totalPrice">0</span>
+
+            <button type="button" onclick="validateAndAddToCart()">Add to Cart</button>
+            <button type="button" onclick="validateAndPayNow()">Pay Now</button>
+
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+/* Basic reset for the body */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays on top */
+    padding: 10px 0;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar nav ul li a:hover {
+    color: #ccc; /* Change color on hover */
+}
+
+.content {
+    margin-top: 50px; /* Adjust 50px to match your navbar height */
+    background-color: #13334c;
+    color: white;
+    text-align: center;
+}
+
+.content h1, .content h3 {
+    color: white; /* Ensure headings are white */
+}
+
+.highlight {
+    font-size: 24px;
+    font-weight: bold; 
+    color: aliceblue; /* Optional: keep the same color */
+}
+
+#about {
+    padding: 40px;
+    background-image: url('backgroundAboutUs.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bio {
+    display: none; /* Initially hide the bio */
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#gallery {
+    background-image:url('bggallery.png'); /* image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: #f6f5e9; /* Light color for text */
+}
+
+#package {
+    text-align: center;
+    padding: 50px;
+    background-image: url('backgroundPackage.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#package h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#package h3 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* Package Card Styling */
+.package-card {
+    display: inline-block;
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+.package-card h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.package-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.package-card ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Pricing and Button */
+.price {
+    font-size: 24px;
+    color: #005792;
+    font-weight: bold;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #005792;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.cta-button:hover {
+    background-color: #FF4500;
+}
+
+/* Accordion Styling */
+.accordion {
+            background-color: #1292EE;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ddd;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+        h4 {
+            color: #333;
+        }
+        ol, ul {
+            padding-left: 20px;
+        }
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.category {
+    width: 300px;
+    background-color: #f6f5e9; /* Light color for card background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+    color: #13334c; /* Dark color for text */
+    margin: 0 10px;
+}
+
+.category h1 {
+    font-size: 20px;
+    color: #005792; /* Blue color for category title */
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 2px solid #005792;
+    transition: color 0.3s;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    background-color: #fd5f00; /* Orange background on hover */
+    color: #f6f5e9; /* Light text color on hover */
+}
+
+.category:hover h1 {
+    color: #f6f5e9; /* Light color for title on hover */
+}
+
+/* Gallery items within category */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Main contact section styling */
+/* Main contact section styling */
+#contact {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: whitesmoke;
+}
+
+/* Blurred background wrapper */
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bgcontact.jpg');
+    background-size: contain;
+    background-position: center;
+    filter: blur(1px); /* Apply blur only to the background image */
+    z-index: 1;
+}
+
+/* Content styling */
+.contact-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    color: #f6f5e9;
+}
+
+.contact-content h2 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fd5f00;
+}
+
+.booking {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.names {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.contact-info {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.contact-link {
+    color: #fd5f00;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: #f6f5e9;
+    text-decoration: underline;
+}
+
+/* Cart icon styles */
+.cart-icon {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* Cart modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #005792;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
